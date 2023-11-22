@@ -49,7 +49,7 @@ export const RegisterWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    min-width: 350px;
+    min-width: 330px;
     max-width: 400px;
     @media (max-width: 900px) {
       min-width: 100%;
@@ -71,7 +71,7 @@ export const FormWrapper = styled.div`
   max-width: 480px;
   margin-top: 5rem;
   height: 100%;
-  padding: 0px 10px 1px 10px;
+  padding: 0 20px;
   @media (max-width: 900px) {
     max-width: 100%;
     min-width: 100%;
