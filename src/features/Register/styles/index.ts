@@ -5,23 +5,29 @@ export const RegisterWrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: start;
-  min-width: 1300px;
+  max-width: 1700px;
   margin: 0 auto;
   width: 100%;
   min-height: 100vh;
   align-items: stretch;
   overflow-y: hidden;
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     flex-direction: column; // Cambia a layout vertical en pantallas pequeñas
     align-items: center;
     min-width: 100%;
   }
-  div {
-    @media (max-width: 800px) {
+  .leftWrapper {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 900px) {
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: start;
     }
   }
 
@@ -45,7 +51,7 @@ export const RegisterWrapper = styled.div`
     width: 100%;
     min-width: 350px;
     max-width: 400px;
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
       min-width: 100%;
     }
 
@@ -61,12 +67,12 @@ export const RegisterWrapper = styled.div`
   }
 `;
 export const FormWrapper = styled.div`
-  width: 40%;
-  min-width: 350px;
-  max-width: 400px;
-  margin: 6rem 8rem 6rem 3rem;
+  width: 100%;
+  max-width: 480px;
+  margin-top: 5rem;
   height: 100%;
-  @media (max-width: 800px) {
+  padding: 0px 10px 1px 10px;
+  @media (max-width: 900px) {
     max-width: 100%;
     min-width: 100%;
     width: 100%;
@@ -75,11 +81,12 @@ export const FormWrapper = styled.div`
   }
 `;
 export const ImageBackground = styled.div`
-  width: 50%;
+  width: 60%;
   height: auto !important;
   min-height: 100%;
   height: 100%;
   background-image: url("/images/aside.jpg");
-  background-size: cover; /* Asegura que la imagen cubra todo el espacio */
-  background-position: 0% 0%; /* Centra la imagen */
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center; 
 `;

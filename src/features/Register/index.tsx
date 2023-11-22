@@ -40,7 +40,7 @@ const Register = () => {
 
   return (
     <RegisterWrapper>
-      <div>
+      <div className="leftWrapper">
         <Nav />
         <FormWrapper>
           <h1>¡Bienvenido!</h1>
