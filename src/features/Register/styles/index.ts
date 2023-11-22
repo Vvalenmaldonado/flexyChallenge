@@ -49,7 +49,7 @@ export const RegisterWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    min-width: 330px;
+    min-width: 320px;
     max-width: 400px;
     @media (max-width: 900px) {
       min-width: 100%;
