@@ -27,3 +27,4 @@ export const validate = (values: IRegister) => {
   }
   return errors;
 };
+

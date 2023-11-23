@@ -22,8 +22,15 @@ const Register = () => {
   const [isSubmittedSuccessfully, setIsSubmittedSuccessfully] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormValues({ ...formValues, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    const updatedValues = { ...formValues, [name]: value };
+
+    setFormValues(updatedValues);
+
+    const updatedErrors = validate(updatedValues);
+    setFormErrors({ ...formErrors, [name]: updatedErrors[name] });
   };
+
   const dispatch = useDispatch();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -79,7 +86,9 @@ const Register = () => {
               errorMesagge={formErrors.password}
               data-testid="register-input"
             />
-
+            <a href="/" className="password">
+              ¿Olvidaste tu contraseña?
+            </a>
             <Button
               type="submit"
               disabled={isSubmittedSuccessfully}

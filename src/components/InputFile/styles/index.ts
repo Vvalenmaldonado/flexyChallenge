@@ -14,7 +14,8 @@ export const InputFileWrapper = styled.div`
     justify-content: start;
     flex-direction: row;
      .checked{
-      width: 30px !important;
+      width: 20px !important;
+      margin-left: 10px;
      }
     img {
     width: 45px !important;

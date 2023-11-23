@@ -12,8 +12,9 @@ export const RegisterWrapper = styled.div`
   align-items: stretch;
   overflow-y: hidden;
   @media (max-width: 900px) {
-    flex-direction: column; // Cambia a layout vertical en pantallas pequeñas
+    flex-direction: column; 
     align-items: center;
+    justify-content: start;
     min-width: 100%;
   }
   .leftWrapper {
@@ -72,13 +73,30 @@ export const FormWrapper = styled.div`
   margin-top: 5rem;
   height: 100%;
   padding: 0 20px;
+
+  .password {
+    display: none;
+  }
+
   @media (max-width: 900px) {
     max-width: 100%;
     min-width: 100%;
     width: 100%;
-    margin: 3rem 0rem;
+    margin: 62px 0;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .password {
+      display: block;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 14px;
+    }
   }
+ 
 `;
 export const ImageBackground = styled.div`
   width: 60%;
@@ -86,7 +104,7 @@ export const ImageBackground = styled.div`
   min-height: 100%;
   height: 100%;
   background-image: url("/images/aside.jpg");
-  background-size: cover; 
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: center;
 `;
