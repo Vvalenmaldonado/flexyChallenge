@@ -7,26 +7,24 @@ export const InputFileWrapper = styled.div`
   justify-content: start;
   width: 100%;
   margin-top: 24px;
-   label{
+  label {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: start;
     flex-direction: row;
-     .checked{
+    .checked {
       width: 20px !important;
       margin-left: 10px;
-     }
+    }
     img {
-    width: 45px !important;
-    cursor: pointer;
-    &:hover {
-      background-color: #e0e0e0;
+      width: 45px !important;
+      cursor: pointer;
+      &:hover {
+        background-color: #e0e0e0;
+      }
     }
   }
-
-   }
- 
 `;
 
 export const FileInputHidden = styled.input.attrs({ type: "file" })`
@@ -43,5 +41,4 @@ export const FileInputLabel = styled.span`
   font-weight: 500;
   margin-left: 10px;
   color: var(--primary-font-color) !important;
- 
 `;

@@ -17,11 +17,23 @@ export const InputFile = ({ label }: IInputFileProps) => {
   };
   return (
     <InputFileWrapper>
-      <FileInputHidden id="file" accept="image/*" onChange={handleFileChange} data-testid='fileInput' />
-      <label htmlFor="file"> 
+      <FileInputHidden
+        id="file"
+        accept="image/*"
+        onChange={handleFileChange}
+        data-testid="fileInput"
+      />
+      <label htmlFor="file">
         <img src="/images/fileInput.svg" alt="upload" />
         <FileInputLabel>{label}</FileInputLabel>
-        {file && <img className="checked" src="/images/checked.svg" alt="Icono de archivo subido" data-testid='checkedIcon'/>}
+        {file && (
+          <img
+            className="checked"
+            src="/images/checked.svg"
+            alt="Icono de archivo subido"
+            data-testid="checkedIcon"
+          />
+        )}
       </label>
     </InputFileWrapper>
   );

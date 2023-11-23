@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-
-
 export const InputStyle = styled.input`
   width: 100%;
   height: 48px;
@@ -16,14 +14,14 @@ export const InputStyle = styled.input`
   &:focus {
     border: 0;
   }
-  &.error{
+  &.error {
     border: 1px solid black;
   }
   @media (max-width: 500px) {
     min-width: 100%;
-
-    }
+  }
 `;
+
 export const InputWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -46,12 +44,13 @@ export const InputWrapper = styled.div`
     }
   }
 `;
+
 export const ErrorMsg = styled.span`
   color: var(---secondary-font-color);
-  font-size: 14px ;
+  font-size: 14px;
   font-weight: 400 !important;
   align-self: center;
   margin-top: 5px;
   position: absolute;
-  bottom: -20px
+  bottom: -20px;
 `;

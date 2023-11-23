@@ -14,6 +14,6 @@ export const ButtonWrapper = styled.button`
   margin-bottom: 24px;
   cursor: ${(props) => (props.disabled ? "auto" : "pointer")};
   @media (max-width: 800px) {
-   margin-top: 27px ;
+    margin-top: 27px;
   }
 `;

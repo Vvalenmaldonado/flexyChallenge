@@ -19,6 +19,7 @@ describe("CreateService", () => {
         <Register />
       </Provider>
     );
+    
     const inputFile = screen.getByTestId("fileInput");
     expect(inputFile).toBeInTheDocument();
     expect(screen.queryByTestId("checkedIcon")).not.toBeInTheDocument();
@@ -37,6 +38,7 @@ describe("CreateService", () => {
         <Register />
       </Provider>
     );
+
     expect(screen.queryByText(/requerido/i)).not.toBeInTheDocument();
     const saveBtn = screen.getByTestId("button");
     fireEvent.click(saveBtn);
@@ -50,13 +52,16 @@ describe("CreateService", () => {
         <Register />
       </Provider>
     );
+
     const nameInput = screen.getAllByTestId("register-input");
     const emailInput = screen.getByTestId("email-input");
     const phoneInput = screen.getByTestId("phone-input");
+
     nameInput.forEach((input) => {
       fireEvent.change(input, { target: { value: "test" } });
       expect(input).toHaveValue("test");
     });
+
     fireEvent.change(emailInput, { target: { value: "email@email.com" } });
     expect(emailInput).toHaveValue("email@email.com");
     fireEvent.change(phoneInput, { target: { value: "123456789" } });
